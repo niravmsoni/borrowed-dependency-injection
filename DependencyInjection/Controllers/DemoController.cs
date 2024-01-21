@@ -10,28 +10,8 @@ namespace DependencyInjection.Controllers
     [ApiController]
     public class DemoController : ControllerBase
     {
-        //HttpGet - read resources
-        //HttpPost - create resource
-        //HttpPut - update resource
-        //HttpDelete - delete resource
-
-        // 2xx - Success Scenarions
-        // 200 - Success Response
-        // 201 - Resource Created
-        // 204 - No Content
-
-        // 4xx - Error Scenarios
-        // 400 - Bad Request
-        // 422 - Validation Failure
-        // 404 - Not Found
-
-        // 500 - Server Side Fault
-
-        // 3xx - Redirection Scenarios
-        // 302 - Redirection happened
-
         [HttpGet]
-        //[ServiceFilter(typeof(MyServiceFilterAttribute))]
+        [ServiceFilter(typeof(MyServiceFilterAttribute))]
         public ActionResult GetAll()
         {
             return Ok(nameof(GetAll));
